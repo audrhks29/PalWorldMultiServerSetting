@@ -1,4 +1,5 @@
 import { memo, useEffect, useState } from 'react';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 const Header = memo(() => {
   const localStorageChecker = (): boolean => {
@@ -26,18 +27,28 @@ const Header = memo(() => {
   }, [dark]);
 
   return (
-    <div className='h-10 w-full flex items-center dark:text-gray-400'>
-      <h1 className='h-full'>로고영역</h1>
+    <div className='h-10 w-full flex items-center'>
+
+      <h1>LOGO</h1>
+
       <nav>
         <ul className="flex">
-          <li className="justify-center">it goes Work!!</li>
-          <li className="">Dark Mode 토글</li>
-          <li onClick={darkSetButton}>{dark ? '현재 Dark모드' : '현재 light모드'}</li>
+
         </ul>
       </nav>
-      <div className='w-[80px] h-[30px] bg-gray-400 rounded-full'>
-        <div className=''></div>
+
+      <div
+        className='w-[70px] h-[30px] bg-gray-400 rounded-full cursor-pointer relative flex justify-around items-center dark:bg-white'
+        onClick={darkSetButton}
+      >
+        <i className='dark:text-black'><MdLightMode /></i>
+        <i><MdDarkMode /></i>
+        <div
+          className='w-[30px] h-[25px] bg-gray-600 absolute top-1/2 -translate-y-1/2 rounded-full'
+          style={{ right: dark ? "5px" : 'auto', left: dark ? 'auto' : "5px" }}>
+        </div>
       </div>
+
     </div>
   );
 });

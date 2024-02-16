@@ -4,7 +4,33 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    ({ addUtilities }) => {
+      addUtilities({
+        ".glassCard": {
+          width: "1200px",
+          height: "800px",
+          backdropFilter: "blur(20px)",
+          padding: "32px",
+          borderRadius: "24px",
+          position: "absolute",
+          top: "50px",
+          left: "50%",
+          transform: "translate(-50%,0)"
+        },
+        ".glassCardLight": {
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          border: "2px solid rgba(255, 255, 255, 0.1)",
+          boxShadow: "0 0 80px rgba(0, 0, 0, 0.1)",
+        },
+        ".glassCardDark": {
+          backgroundColor: "rgba(0, 0, 0, 0.1)",
+          border: "2px solid rgba(0, 0, 0, 0.1)",
+          boxShadow: "0 0 80px rgba(255, 255, 255, 0.1)",
+        },
+      });
+    },
+  ],
   darkMode: 'class'
 }
 
