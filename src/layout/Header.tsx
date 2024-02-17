@@ -1,5 +1,6 @@
 import { memo, useEffect, useState } from 'react';
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
+import ChooseLanguage from './ChooseLanguage';
 
 const Header = memo(() => {
   const localStorageChecker = (): boolean => {
@@ -28,26 +29,23 @@ const Header = memo(() => {
 
   return (
     <div className='h-10 w-full flex items-center'>
-
       <h1>LOGO</h1>
-
-      <nav>
-        <ul className="flex">
-
-        </ul>
-      </nav>
-
+      {/* <nav>
+        <ul className="flex"></ul>
+      </nav> */}
       <div
-        className='w-[70px] h-[30px] bg-gray-400 rounded-full cursor-pointer relative flex justify-around items-center dark:bg-white'
+        className='w-[70px] h-[30px] bg-white rounded-full cursor-pointer relative flex justify-around items-center dark:bg-gray-400'
         onClick={darkSetButton}
       >
-        <i className='dark:text-black'><MdLightMode /></i>
-        <i><MdDarkMode /></i>
+        <i className='dark:text-black'><MdDarkMode /></i>
+        <i ><MdLightMode /></i>
         <div
           className='w-[30px] h-[25px] bg-gray-600 absolute top-1/2 -translate-y-1/2 rounded-full'
           style={{ right: dark ? "5px" : 'auto', left: dark ? 'auto' : "5px" }}>
         </div>
       </div>
+
+      <ChooseLanguage />
 
     </div>
   );

@@ -19,12 +19,12 @@ export default {
           transform: "translate(-50%,0)"
         },
         ".glassCardLight": {
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          backgroundColor: "rgba(255, 255, 255, 0.3)",
           border: "2px solid rgba(255, 255, 255, 0.1)",
           boxShadow: "0 0 80px rgba(0, 0, 0, 0.1)",
         },
         ".glassCardDark": {
-          backgroundColor: "rgba(0, 0, 0, 0.1)",
+          backgroundColor: "rgba(0, 0, 0, 0.2)",
           border: "2px solid rgba(0, 0, 0, 0.1)",
           boxShadow: "0 0 80px rgba(255, 255, 255, 0.1)",
         },
