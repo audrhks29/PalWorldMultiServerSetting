@@ -1,25 +1,31 @@
-import React, { memo, useState } from 'react';
+import { memo, useState } from 'react';
 
-const Slider = React.forwardRef((props, sliderRef) => {
+interface Props extends Pick<SettingListTypes, "defaultValue" | "min" | "max" | "step"> {
+  selectedLanguage: string;
+}
+
+const Slider = memo((props: Props) => {
   const [sliderValue, setSliderValue] = useState(props.defaultValue);
+
   const [isEdit, setIsEdit] = useState(false);
 
-  const aa = (e) => {
+  const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (isEdit) setIsEdit(false)
-    setSliderValue(e.target.value)
+    setSliderValue(Number(e.target.value))
   }
 
-  const bb = () => {
+  const handleIsEdit = () => {
     if (isEdit) setIsEdit(false)
   }
 
   return (
     <div
       className='flex glassCardLight dark:glassCardDark p-1 m-1'
-      onMouseLeave={bb}
-      ref={sliderRef}
+      onMouseLeave={handleIsEdit}
     >
-      <p className='w-[600px] text-left '>{props.kor}</p>
+      <p className='w-[600px] text-left'>
+        {props.selectedLanguage}
+      </p>
 
       {!isEdit &&
         <p
@@ -34,7 +40,7 @@ const Slider = React.forwardRef((props, sliderRef) => {
           type="text"
           value={sliderValue}
           className='w-10 text-center mr-2'
-          onChange={(e) => setSliderValue(e.target.value)}
+          onChange={(e) => setSliderValue(Number(e.target.value))}
         />
       }
 
@@ -43,7 +49,7 @@ const Slider = React.forwardRef((props, sliderRef) => {
         className='w-[400px]'
         min={props.min}
         max={props.max}
-        onChange={aa}
+        onChange={handleRangeChange}
         value={sliderValue}
         step={props.step}
       />

@@ -5,7 +5,6 @@ import Header from './layout/Header';
 import SettingServer from './pages/SettingServer';
 
 const App = memo(() => {
-  console.log(window.innerHeight);
   return (
     <div
       className='relative dark:bg-black dark:bg-opacity-70 dark:text-gray-300'

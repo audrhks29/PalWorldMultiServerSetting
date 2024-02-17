@@ -3,7 +3,7 @@
     "id": 2,
     "type": "range",
     "eng": "DayTimeSpeedRate",
-    "kor": "낯의 경과 속도",
+    "kor": "낮의 경과 속도",
     "defaultValue": 1,
     "min": 0.1,
     "max": 5,

@@ -1,11 +1,10 @@
 import create from 'zustand';
 
-const languageStore = create(set => ({
+const languageStore = create<LanguageStoreTypes>((set) => ({
   language: "English",
 
-  setLanguage: () => {
-    if (navigator.language === "ko-KR") set({ language: "korean" })
-    else set({ language: "english" })
+  setLanguage: (selectedLanguage) => {
+    set({ language: selectedLanguage })
   }
 }));
 
