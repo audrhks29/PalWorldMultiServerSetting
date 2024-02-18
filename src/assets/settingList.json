@@ -1,5 +1,16 @@
 [
   {
+    "id": 1,
+    "type": "radio",
+    "eng": "Difficulty",
+    "kor": "난이도",
+    "defaultValue": "None",
+    "range1": "None",
+    "range2": "Casual",
+    "range3": "Normal",
+    "range4": "Hard"
+  },
+  {
     "id": 2,
     "type": "range",
     "eng": "DayTimeSpeedRate",
@@ -230,6 +241,86 @@
     "step": 0.1
   },
   {
+    "id": 25,
+    "type": "radio",
+    "eng": "DeathPenalty",
+    "kor": "데스 페널티",
+    "defaultValue": "All",
+    "range1": "None",
+    "range2": "Item",
+    "range3": "ItemAndEquipment",
+    "range4": "All"
+  },
+  {
+    "id": 26,
+    "type": "radio",
+    "eng": "bEnablePlayerToPlayerDamage",
+    "kor": "플레이어간 데미지 여부",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": ""
+  },
+  {
+    "id": 27,
+    "type": "radio",
+    "eng": "bEnableFriendlyFire",
+    "kor": "아군간 데미지 여부",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": ""
+  },
+  {
+    "id": 28,
+    "type": "radio",
+    "eng": "bEnableInvaderEnemy",
+    "kor": "습격 이벤트 발생 여부",
+    "defaultValue": "True",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": ""
+  },
+  {
+    "id": 29,
+    "type": "radio",
+    "eng": "bActiveUNKO",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 30,
+    "type": "radio",
+    "eng": "bEnableAimAssistPad",
+    "kor": "",
+    "defaultValue": "True",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 31,
+    "type": "radio",
+    "eng": "bEnableAimAssistKeyboard",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
     "id": 32,
     "type": "range",
     "eng": "DropItemMaxNum",
@@ -250,6 +341,18 @@
     "step": 1
   },
   {
+    "id": 37,
+    "type": "radio",
+    "eng": "bAutoResetGuildNoOnlinePlayers",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "",
+    "range2": "",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
     "id": 39,
     "type": "range",
     "eng": "GuildPlayerMaxNum",
@@ -268,5 +371,124 @@
     "min": 0,
     "max": 240,
     "step": 1
+  },
+  {
+    "id": 42,
+    "type": "radio",
+    "eng": "bIsMultiplay",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 43,
+    "type": "radio",
+    "eng": "bIsPvP",
+    "kor": "PvP 활성화 여부",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": ""
+  },
+  {
+    "id": 44,
+    "type": "radio",
+    "eng": "bCanPickupOtherGuildDeathPenaltyDrop",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 45,
+    "type": "radio",
+    "eng": "bEnableNonLoginPenalty",
+    "kor": "",
+    "defaultValue": "True",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 46,
+    "type": "radio",
+    "eng": "bEnableFastTravel",
+    "kor": "",
+    "defaultValue": "True",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 47,
+    "type": "radio",
+    "eng": "bIsStartLocationSelectByMap",
+    "kor": "",
+    "defaultValue": "True",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 48,
+    "type": "radio",
+    "eng": "bExistPlayerAfterLogout",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 49,
+    "type": "radio",
+    "eng": "bEnableDefenseOtherGuildPlayer",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 58,
+    "type": "radio",
+    "eng": "RCONEnabled",
+    "kor": "",
+    "defaultValue": "False",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
+  },
+  {
+    "id": 61,
+    "type": "radio",
+    "eng": "bUseAuth",
+    "kor": "",
+    "defaultValue": "True",
+    "range1": "True",
+    "range2": "False",
+    "range3": "",
+    "range4": "",
+    "fixed": true
   }
 ]

@@ -3,9 +3,11 @@ import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import ChooseLanguage from './ChooseLanguage';
 
 const Header = memo(() => {
+  // dark mode check
+  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   const localStorageChecker = (): boolean => {
-    if (!localStorage.theme) return false;
+    if (!localStorage.theme) return isDarkMode;
     return localStorage.theme === 'dark' ? true : false;
   };
 

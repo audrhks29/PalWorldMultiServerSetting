@@ -1,6 +1,6 @@
 import { memo, useState } from 'react';
 
-interface Props extends Pick<SettingListTypes, "defaultValue" | "min" | "max" | "step"> {
+interface Props extends Pick<SettingListSliderTypes, "defaultValue" | "min" | "max" | "step"> {
   selectedLanguage: string;
 }
 

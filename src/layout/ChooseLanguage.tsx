@@ -1,13 +1,13 @@
 import { memo, useState } from 'react';
 
-import languageStore from '../store/language-store';
+import useLanguageStore from '../store/language-store';
 
 import languageList from '../assets/languages.json'
 
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 
 const ChooseLanguage = memo(() => {
-  const { language, setLanguage } = languageStore()
+  const { language, setLanguage } = useLanguageStore()
 
   const [isChooseLanguage, setIsChooseLanguage] = useState(false)
 

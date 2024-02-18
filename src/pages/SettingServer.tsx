@@ -4,19 +4,20 @@ import list from '../assets/settingList.json'
 
 import Slider from '../components/Slider';
 
-import languageStore from '../store/language-store';
+import useLanguageStore from '../store/language-store';
+import Radio from '../components/Radio';
 
 const SettingServer = memo(() => {
-  const { language } = languageStore()
+  const { language } = useLanguageStore()
   return (
     <main className='w-[1200px] m-auto font-semibold'>
       <h2 className='text-4xl font-thin mb-5'>World Setting</h2>
       <div className='h-[700px] overflow-auto'>
-        {list.map(item => {
+        {list.map((item, index) => {
           if (item.type === "range") {
             return (
               <Slider
-                key={item.id}
+                key={index}
                 defaultValue={item.defaultValue}
                 min={item.min}
                 max={item.max}
@@ -25,10 +26,22 @@ const SettingServer = memo(() => {
               />
             )
           }
+          if (item.type === "radio" && !item.fixed) {
+            return (
+              <Radio
+                key={index}
+                id={item.id}
+                defaultValue={item.defaultValue}
+                range1={item.range1}
+                range2={item.range2}
+                range3={item.range3}
+                range4={item.range4}
+                selectedLanguage={language === "Korean" ? item.kor : item.eng}
+              />
+            )
+          }
         })}
       </div>
-
-
     </main>
   );
 });
