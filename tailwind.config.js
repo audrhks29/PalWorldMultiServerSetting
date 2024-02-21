@@ -28,6 +28,16 @@ export default {
           border: "2px solid rgba(0, 0, 0, 0.1)",
           boxShadow: "0 0 80px rgba(255, 255, 255, 0.1)",
         },
+        ".inputListLight input[type=radio]+label,.inputListDark input[type=radio]:checked+label": {
+          backgroundColor: "rgba(255, 255, 255, 0.3)",
+          border: "2px solid rgba(255, 255, 255, 0.1)",
+          boxShadow: "0 0 80px rgba(0, 0, 0, 0.1)",
+        },
+        ".inputListLight input[type=radio]:checked+label,.inputListDark input[type=radio]+label": {
+          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          border: "2px solid rgba(0, 0, 0, 0.1)",
+          boxShadow: "0 0 80px rgba(255, 255, 255, 0.1)",
+        },
       });
     },
   ],

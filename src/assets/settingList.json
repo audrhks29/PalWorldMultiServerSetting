@@ -5,10 +5,22 @@
     "eng": "Difficulty",
     "kor": "난이도",
     "defaultValue": "None",
-    "range1": "None",
-    "range2": "Casual",
-    "range3": "Normal",
-    "range4": "Hard"
+    "range1": {
+      "eng": "None",
+      "kor": "없음"
+    },
+    "range2": {
+      "eng": "Casual",
+      "kor": "캐주얼"
+    },
+    "range3": {
+      "eng": "Normal",
+      "kor": "노멀"
+    },
+    "range4": {
+      "eng": "Hard",
+      "kor": "하드"
+    }
   },
   {
     "id": 2,
@@ -54,7 +66,7 @@
     "id": 6,
     "type": "range",
     "eng": "PalSpawnNumRate",
-    "kor": "팰 출현 배율[10] *게임 성능에 영향을 미칩니다",
+    "kor": "펠 출현 배율",
     "defaultValue": 1,
     "min": 0.1,
     "max": 3,
@@ -64,7 +76,7 @@
     "id": 7,
     "type": "range",
     "eng": "PalDamageRateAttack",
-    "kor": "팰이 주는 피해 배율",
+    "kor": "펠이 주는 피해 배율",
     "defaultValue": 1,
     "min": 0.1,
     "max": 5,
@@ -74,7 +86,7 @@
     "id": 8,
     "type": "range",
     "eng": "PalDamageRateDefense",
-    "kor": "팰이 받는 피해 배율",
+    "kor": "펠이 받는 피해 배율",
     "defaultValue": 1,
     "min": 0.1,
     "max": 5,
@@ -144,7 +156,7 @@
     "id": 15,
     "type": "range",
     "eng": "PalStomachDecreaceRate",
-    "kor": "팰 포만도 감소 배율",
+    "kor": "펠 포만도 감소 배율",
     "defaultValue": 1,
     "min": 0.1,
     "max": 5,
@@ -154,7 +166,7 @@
     "id": 16,
     "type": "range",
     "eng": "PalStaminaDecreaceRate",
-    "kor": "팰 기력 감소 배율",
+    "kor": "펠 기력 감소 배율",
     "defaultValue": 1,
     "min": 0.1,
     "max": 5,
@@ -164,7 +176,7 @@
     "id": 17,
     "type": "range",
     "eng": "PalAutoHPRegeneRate",
-    "kor": "팰 HP 자연 회복 배율",
+    "kor": "펠 HP 자연 회복 배율",
     "defaultValue": 1,
     "min": 0.1,
     "max": 5,
@@ -174,7 +186,7 @@
     "id": 18,
     "type": "range",
     "eng": "PalAutoHpRegeneRateInSleep",
-    "kor": "팰 수면 시 HP 회복 배율(팰 상자 내 HP 회복 배율)",
+    "kor": "펠 수면 시 HP 회복 배율(펠 상자 내 HP 회복 배율)",
     "defaultValue": 1,
     "min": 0.1,
     "max": 5,
@@ -246,10 +258,22 @@
     "eng": "DeathPenalty",
     "kor": "데스 페널티",
     "defaultValue": "All",
-    "range1": "None",
-    "range2": "Item",
-    "range3": "ItemAndEquipment",
-    "range4": "All"
+    "range1": {
+      "eng": "None",
+      "kor": "없음"
+    },
+    "range2": {
+      "eng": "Item",
+      "kor": "장비 이외 아이템 드랍"
+    },
+    "range3": {
+      "eng": "ItemAndEquipment",
+      "kor": "모든 아이템 드랍"
+    },
+    "range4": {
+      "eng": "All",
+      "kor": "모든 펠과 아이템 드랍"
+    }
   },
   {
     "id": 26,
@@ -257,10 +281,22 @@
     "eng": "bEnablePlayerToPlayerDamage",
     "kor": "플레이어간 데미지 여부",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": ""
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    }
   },
   {
     "id": 27,
@@ -268,10 +304,22 @@
     "eng": "bEnableFriendlyFire",
     "kor": "아군간 데미지 여부",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": ""
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    }
   },
   {
     "id": 28,
@@ -279,10 +327,22 @@
     "eng": "bEnableInvaderEnemy",
     "kor": "습격 이벤트 발생 여부",
     "defaultValue": "True",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": ""
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    }
   },
   {
     "id": 29,
@@ -290,10 +350,22 @@
     "eng": "bActiveUNKO",
     "kor": "",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -302,10 +374,22 @@
     "eng": "bEnableAimAssistPad",
     "kor": "",
     "defaultValue": "True",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -314,10 +398,22 @@
     "eng": "bEnableAimAssistKeyboard",
     "kor": "",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -331,14 +427,38 @@
     "step": 1
   },
   {
+    "id": 33,
+    "type": "doNotTouch",
+    "eng": "DropItemMaxNum_UNKO",
+    "kor": "",
+    "defaultValue": 100,
+    "fixed": true
+  },
+  {
+    "id": 34,
+    "type": "doNotTouch",
+    "eng": "BaseCampMaxNum",
+    "kor": "거점 최대 수량",
+    "defaultValue": 128,
+    "fixed": true
+  },
+  {
     "id": 35,
     "type": "range",
     "eng": "BaseCampWorkerMaxNum",
-    "kor": "거점 작업 팰 최대 수",
+    "kor": "거점 작업 펠 최대 수",
     "defaultValue": 15,
     "min": 1,
     "max": 20,
     "step": 1
+  },
+  {
+    "id": 36,
+    "type": "doNotTouch",
+    "eng": "DropItemAliveMaxHours",
+    "kor": "",
+    "defaultValue": 1,
+    "fixed": true
   },
   {
     "id": 37,
@@ -346,10 +466,30 @@
     "eng": "bAutoResetGuildNoOnlinePlayers",
     "kor": "",
     "defaultValue": "False",
-    "range1": "",
-    "range2": "",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
+    "fixed": true
+  },
+  {
+    "id": 38,
+    "type": "doNotTouch",
+    "eng": "AutoResetGuildTimeNoOnlinePlayers",
+    "kor": "",
+    "defaultValue": 72,
     "fixed": true
   },
   {
@@ -373,15 +513,35 @@
     "step": 1
   },
   {
+    "id": 41,
+    "type": "doNotTouch",
+    "eng": "WorkSpeedRate",
+    "kor": "작업 속도 배율",
+    "defaultValue": 1,
+    "fixed": true
+  },
+  {
     "id": 42,
     "type": "radio",
     "eng": "bIsMultiplay",
     "kor": "",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -390,10 +550,22 @@
     "eng": "bIsPvP",
     "kor": "PvP 활성화 여부",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": ""
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    }
   },
   {
     "id": 44,
@@ -401,10 +573,22 @@
     "eng": "bCanPickupOtherGuildDeathPenaltyDrop",
     "kor": "",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -413,10 +597,22 @@
     "eng": "bEnableNonLoginPenalty",
     "kor": "",
     "defaultValue": "True",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -425,10 +621,22 @@
     "eng": "bEnableFastTravel",
     "kor": "",
     "defaultValue": "True",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -437,10 +645,22 @@
     "eng": "bIsStartLocationSelectByMap",
     "kor": "",
     "defaultValue": "True",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -449,10 +669,22 @@
     "eng": "bExistPlayerAfterLogout",
     "kor": "",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
     "fixed": true
   },
   {
@@ -461,10 +693,86 @@
     "eng": "bEnableDefenseOtherGuildPlayer",
     "kor": "",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
+    "fixed": true
+  },
+  {
+    "id": 50,
+    "type": "doNotTouch",
+    "eng": "CoopPlayerMaxNum",
+    "kor": "협동던전 최대인원",
+    "defaultValue": 4,
+    "fixed": true
+  },
+  {
+    "id": 51,
+    "type": "doNotTouch",
+    "eng": "ServerPlayerMaxNum",
+    "kor": "서버 최대 인원",
+    "defaultValue": 32,
+    "fixed": true
+  },
+  {
+    "id": 52,
+    "type": "doNotTouch",
+    "eng": "ServerName",
+    "kor": "서버명",
+    "defaultValue": null,
+    "fixed": true
+  },
+  {
+    "id": 53,
+    "type": "doNotTouch",
+    "eng": "ServerDescription",
+    "kor": "서버 설명",
+    "defaultValue": null,
+    "fixed": true
+  },
+  {
+    "id": 54,
+    "type": "doNotTouch",
+    "eng": "AdminPassword",
+    "kor": "어드민 비밀번호",
+    "defaultValue": null,
+    "fixed": true
+  },
+  {
+    "id": 55,
+    "type": "doNotTouch",
+    "eng": "ServerPassword",
+    "kor": "서버 비밀번호",
+    "defaultValue": null,
+    "fixed": true
+  },
+  {
+    "id": 56,
+    "type": "doNotTouch",
+    "eng": "PublicPort",
+    "kor": "공용 포트",
+    "defaultValue": 8211,
+    "fixed": true
+  },
+  {
+    "id": 57,
+    "type": "doNotTouch",
+    "eng": "PublicIP",
+    "kor": "공용 IP",
+    "defaultValue": null,
     "fixed": true
   },
   {
@@ -473,10 +781,38 @@
     "eng": "RCONEnabled",
     "kor": "",
     "defaultValue": "False",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
+    "fixed": true
+  },
+  {
+    "id": 59,
+    "type": "doNotTouch",
+    "eng": "RCONPort",
+    "kor": "",
+    "defaultValue": 25575,
+    "fixed": true
+  },
+  {
+    "id": 60,
+    "type": "doNotTouch",
+    "eng": "Region",
+    "kor": "",
+    "defaultValue": null,
     "fixed": true
   },
   {
@@ -485,10 +821,30 @@
     "eng": "bUseAuth",
     "kor": "",
     "defaultValue": "True",
-    "range1": "True",
-    "range2": "False",
-    "range3": "",
-    "range4": "",
+    "range1": {
+      "eng": "True",
+      "kor": "허용"
+    },
+    "range2": {
+      "eng": "False",
+      "kor": "비허용"
+    },
+    "range3": {
+      "eng": "",
+      "kor": ""
+    },
+    "range4": {
+      "eng": "",
+      "kor": ""
+    },
+    "fixed": true
+  },
+  {
+    "id": 62,
+    "type": "doNotTouch",
+    "eng": "BanListURL",
+    "kor": "",
+    "defaultValue": "https://api.palworldgame.com/api/banlist.txt",
     "fixed": true
   }
 ]

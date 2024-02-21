@@ -8,7 +8,7 @@ interface SettingListCommonTypes {
   "type": string;
   "eng": string;
   "kor": string;
-  "defaultValue": number | string;
+  "defaultValue": number | string | null;
 }
 
 interface SettingListSliderTypes extends SettingListCommonTypes {
@@ -18,8 +18,13 @@ interface SettingListSliderTypes extends SettingListCommonTypes {
 }
 
 interface SettingListRadioTypes extends SettingListCommonTypes {
-  "range1": string | undefined;
-  "range2": string | undefined;
-  "range3": string | undefined;
-  "range4": string | undefined;
+  "range1": Language | undefined;
+  "range2": Language | undefined;
+  "range3": Language | undefined;
+  "range4": Language | undefined;
+}
+
+interface Language {
+  eng: string;
+  kor: string;
 }
