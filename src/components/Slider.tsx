@@ -1,12 +1,14 @@
 import { memo, useState } from 'react';
+import useSettingDataStore from '../store/setting-store';
 
 interface Props extends Pick<SettingListSliderTypes, "id" | "defaultValue" | "min" | "max" | "step"> {
   selectedLanguage: string;
   titleName: string;
-  handleSliderChange: (id: number, titleName: string, value: number) => void;
 }
 
 const Slider = memo((props: Props) => {
+  const { handleSliderChange } = useSettingDataStore();
+
   const [sliderValue, setSliderValue] = useState<number | string>(
     props.defaultValue !== null ? props.defaultValue : ""
   );
@@ -17,7 +19,7 @@ const Slider = memo((props: Props) => {
     const value = Number(e.target.value)
     if (isEdit) setIsEdit(false)
     setSliderValue(value)
-    props.handleSliderChange(props.id, props.titleName, value);
+    handleSliderChange(props.id, value);
   }
 
   const handleIsEdit = () => {

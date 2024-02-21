@@ -1,26 +1,27 @@
 import { memo, useState } from 'react';
 import useLanguageStore from '../store/language-store';
+import useSettingDataStore from '../store/setting-store';
 
 interface Props extends Pick<SettingListRadioTypes,
   "id" | "defaultValue" | "range1" | "range2" | "range3" | "range4"> {
   selectedLanguage: string;
   titleName: string;
-  handleSliderChange: (id: number, titleName: string, value: string) => void;
 }
 
 const Radio = memo((props: Props) => {
   const { language } = useLanguageStore();
+  const { handleSliderChange } = useSettingDataStore()
+
   const [radioValue, setRadioValue] = useState(props.defaultValue);
 
   const rangeArray = [
     props.range1, props.range2, props.range3, props.range4
   ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, titleName: string) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setRadioValue(value);
-    console.log(titleName);
-    props.handleSliderChange(props.id, props.titleName, value);
+    handleSliderChange(props.id, value);
   };
 
   return (
@@ -44,7 +45,7 @@ const Radio = memo((props: Props) => {
                   className='hidden'
                   value={item?.eng}
                   checked={item?.eng === radioValue}
-                  onChange={(e) => handleChange(e, item?.eng ?? "")}
+                  onChange={(e) => handleChange(e)}
                 />
 
                 <label htmlFor={`id${props.id}${index}`}

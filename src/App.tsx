@@ -3,23 +3,30 @@ import { memo, useEffect, useState } from 'react';
 import Header from './layout/Header';
 
 import SettingServer from './pages/SettingServer';
-import useLanguageStore from './store/language-store';
 import Button from './components/Button';
+import Popup from './components/Popup';
+
+import useLanguageStore from './store/language-store';
+import useSettingDataStore from './store/setting-store';
+import usePopupStore from './store/popup-store';
 
 const App = memo(() => {
-  const { getLanguage } = useLanguageStore()
+  const { getLanguage } = useLanguageStore();
+  const { initializeData, settingData } = useSettingDataStore();
+  const { popupState } = usePopupStore();
 
-  const browserHeight = window.innerHeight
-
-  const [height, setHeight] = useState(browserHeight)
-
-  useEffect(() => {
-    getLanguage()
-  }, [getLanguage])
+  const browserHeight = window.innerHeight;
+  console.log(settingData);
+  const [height, setHeight] = useState(browserHeight);
 
   useEffect(() => {
-    setHeight(browserHeight)
-  }, [browserHeight])
+    getLanguage();
+    initializeData();
+  }, [getLanguage, initializeData]);
+
+  useEffect(() => {
+    setHeight(browserHeight);
+  }, [browserHeight]);
 
   return (
     <div
@@ -32,6 +39,7 @@ const App = memo(() => {
       <Header />
       <SettingServer />
       <Button />
+      {popupState && <Popup />}
     </div>
   );
 });
