@@ -48,7 +48,6 @@ const SettingServer = memo(() => {
 
         })}
       </div>
-      <button>데이터 가져오기</button>
     </main>
   );
 });
