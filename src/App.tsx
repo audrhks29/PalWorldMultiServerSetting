@@ -41,6 +41,7 @@ const App = memo(() => {
     >
       <img
         src="images/background.webp"
+        alt="background"
         className='absolute -z-10 opacity-65 w-screen h-screen object-cover'
         style={{ minHeight: height, minWidth: width }}
       />

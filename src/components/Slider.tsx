@@ -67,13 +67,20 @@ const Slider = memo((props: Props) => {
       }
 
       {isEdit &&
-        <input
-          type="number"
-          value={sliderValue}
-          className='w-10 text-center mr-2 glassCardDark text-white dark:text-black'
-          onChange={handleInputChange}
-          step={props.step}
-        />
+        <>
+          <input
+            type="number"
+            id={String(props.id) + "number"}
+            value={sliderValue}
+            className='w-10 text-center mr-2 glassCardDark text-white dark:text-black'
+            onChange={handleInputChange}
+            step={props.step}
+          />
+          <label
+            className='hidden'
+            htmlFor={String(props.id) + "number"}
+          >{props.selectedLanguage}</label>
+        </>
       }
 
       <input
@@ -81,11 +88,15 @@ const Slider = memo((props: Props) => {
         className='w-[400px]'
         min={props.min}
         max={props.max}
+        id={String(props.id) + "range"}
         onChange={handleRangeChange}
         value={sliderValue}
         step={props.step}
       />
-
+      <label
+        className='hidden'
+        htmlFor={String(props.id) + "range"}>
+        {props.selectedLanguage}</label>
     </div >
   );
 });
