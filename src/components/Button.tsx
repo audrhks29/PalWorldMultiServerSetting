@@ -14,21 +14,22 @@ const Button = memo(() => {
   }
 
   return (
-    <div className='w-[400px] m-auto mt-5 flex justify-between h-12'>
+    <div className='w-full p-5'>
+      <div className=' m-auto w-[400px] flex justify-between h-12'>
+        <button
+          className='w-48 font-bold glassCardLight hover:glassCardDark dark:glassCardDark dark:hover:glassCardLight hover:text-white dark:hover:text-black'
+          onClick={reset}
+        >
+          {language === "Korean" ? "초기화" : "RESET"}
+        </button>
 
-      <button
-        className='w-48 font-bold glassCardLight hover:glassCardDark dark:glassCardDark dark:hover:glassCardLight hover:text-white dark:hover:text-black'
-        onClick={reset}
-      >
-        {language === "Korean" ? "초기화" : "RESET"}
-      </button>
-
-      <button
-        className='w-48 font-bold glassCardLight hover:glassCardDark dark:glassCardDark dark:hover:glassCardLight hover:text-white dark:hover:text-black'
-        onClick={togglePopup}
-      >
-        {language === "Korean" ? "저장" : "SAVE"}
-      </button>
+        <button
+          className='w-48 font-bold glassCardLight hover:glassCardDark dark:glassCardDark dark:hover:glassCardLight hover:text-white dark:hover:text-black'
+          onClick={togglePopup}
+        >
+          {language === "Korean" ? "저장" : "SAVE"}
+        </button>
+      </div>
     </div>
   );
 });

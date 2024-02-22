@@ -15,9 +15,11 @@ const App = memo(() => {
   const { initializeData } = useSettingDataStore();
   const { popupState } = usePopupStore();
 
-  const browserHeight = window.innerHeight;
+  const contentsHeight = document.documentElement.scrollHeight;
+  const contentsWidth = document.documentElement.scrollWidth;
 
-  const [height, setHeight] = useState(browserHeight);
+  const [height, setHeight] = useState(contentsHeight);
+  const [width, setWidth] = useState(contentsWidth);
 
   useEffect(() => {
     getLanguage();
@@ -25,17 +27,23 @@ const App = memo(() => {
   }, [getLanguage, initializeData]);
 
   useEffect(() => {
-    setHeight(browserHeight);
-  }, [browserHeight]);
+    setHeight(contentsHeight);
+  }, [contentsHeight]);
+
+  useEffect(() => {
+    setWidth(contentsWidth)
+  }, [contentsWidth])
 
   return (
     <div
-      className='relative dark:bg-black dark:bg-opacity-70 dark:text-gray-300'
-      style={{ height: height }}
+      className='relative dark:bg-black dark:bg-opacity-70 dark:text-gray-300 w-screen h-screen'
+      style={{ minHeight: height, minWidth: width }}
     >
       <img
         src="images/background.webp"
-        className='absolute -z-10 opacity-65 w-full h-full object-cover' />
+        className='absolute -z-10 opacity-65 w-screen h-screen object-cover'
+        style={{ minHeight: height, minWidth: width }}
+      />
       <Header />
       <SettingServer />
       <Button />
