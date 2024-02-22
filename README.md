@@ -34,6 +34,10 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
 ```
+
+3. sitemap등록
+   1. 구글 등록
+   2. 네이버 등록
 ## 4. Google AdSense
 1. 광고설정을 위해 index.html head태그에 코드 추가
    ```js 
