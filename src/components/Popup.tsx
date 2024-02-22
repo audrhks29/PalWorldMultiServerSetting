@@ -3,8 +3,10 @@ import useSettingDataStore from '../store/setting-store';
 import usePopupStore from '../store/popup-store';
 import { LuClipboard } from 'react-icons/lu';
 import { IoMdCloseCircleOutline } from 'react-icons/io';
+import useLanguageStore from '../store/language-store';
 
 const Popup = memo(() => {
+  const { language } = useLanguageStore();
   const { settingData } = useSettingDataStore();
   const { togglePopup } = usePopupStore();
 
@@ -40,7 +42,9 @@ OptionSettings=(`;
 
     document.body.removeChild(textarea);
 
-    alert('복사되었습니다.');
+    language === "English" ?
+      alert('WAS COPIED TO THE CLIPBOARD.\nPASTE IT INTO YOUR DefaultPalWorldSettings.ini FILE. ') :
+      alert('복사되었습니다./nDefaultPalWorldSettings.ini에 붙여넣기 하세요.')
   };
   return (
     <div

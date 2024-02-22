@@ -32,7 +32,7 @@ const Header = memo(() => {
 
   return (
     <div className='h-12 w-[1400px] m-auto flex items-center justify-between'>
-      <h1>Logo</h1>
+      <h1></h1>
 
       <div className='flex items-center'>
         <div

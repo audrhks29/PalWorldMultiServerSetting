@@ -38,6 +38,7 @@ export default {
           border: "2px solid rgba(0, 0, 0, 0.1)",
           boxShadow: "0 0 80px rgba(255, 255, 255, 0.1)",
         },
+
       });
     },
   ],

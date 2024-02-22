@@ -6,7 +6,12 @@ const Button = memo(() => {
   const { language } = useLanguageStore();
   const { togglePopup } = usePopupStore();
 
-  const reset = () => window.location.reload();
+  const reset = () => {
+    const messages = language === "English"
+      ? confirm("Are you sure you want to reset?")
+      : confirm("정말 초기화 하시겠습니까?")
+    if (messages) window.location.reload();
+  }
 
   return (
     <div className='w-[400px] m-auto mt-5 flex justify-between h-12'>

@@ -12,11 +12,11 @@ import usePopupStore from './store/popup-store';
 
 const App = memo(() => {
   const { getLanguage } = useLanguageStore();
-  const { initializeData, settingData } = useSettingDataStore();
+  const { initializeData } = useSettingDataStore();
   const { popupState } = usePopupStore();
 
   const browserHeight = window.innerHeight;
-  console.log(settingData);
+
   const [height, setHeight] = useState(browserHeight);
 
   useEffect(() => {

@@ -20,7 +20,7 @@ const ChooseLanguage = memo(() => {
     <div className='relative'>
       <div
         onClick={() => setIsChooseLanguage(!isChooseLanguage)}
-        className='cursor-pointer w-44 h-8 glassCardLight dark:glassCardDark flex items-center justify-between'
+        className='cursor-pointer px-2 w-44 h-8 glassCardLight dark:glassCardDark flex items-center justify-between'
       >
         <span>{language}</span>
         <span>
@@ -33,7 +33,7 @@ const ChooseLanguage = memo(() => {
           {languageList.map(item => (
             <li
               key={item.id}
-              className='h-8 leading-8 cursor-pointer hover:font-semibold'
+              className='h-8 leading-8 cursor-pointer hover:font-semibold px-2'
               onClick={() => handleChooseLanguage(item.language)}>
               {item.language}
             </li>

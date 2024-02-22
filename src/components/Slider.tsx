@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useEffect, useRef, useState } from 'react';
 import useSettingDataStore from '../store/setting-store';
 
 interface Props extends Pick<SettingListSliderTypes, "id" | "defaultValue" | "min" | "max" | "step"> {
@@ -9,11 +9,25 @@ interface Props extends Pick<SettingListSliderTypes, "id" | "defaultValue" | "mi
 const Slider = memo((props: Props) => {
   const { handleSliderChange } = useSettingDataStore();
 
+  const [isEdit, setIsEdit] = useState(false);
   const [sliderValue, setSliderValue] = useState<number | string>(
     props.defaultValue !== null ? props.defaultValue : ""
   );
 
-  const [isEdit, setIsEdit] = useState(false);
+  const node = useRef<HTMLDivElement>(null);
+
+  const handleClickOutside = (e: MouseEvent) => {
+    if (node.current && !node.current.contains(e.target as Node)) {
+      setIsEdit(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(e.target.value)
@@ -22,14 +36,23 @@ const Slider = memo((props: Props) => {
     handleSliderChange(props.id, value);
   }
 
-  const handleIsEdit = () => {
-    if (isEdit) setIsEdit(false)
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = Number(e.target.value);
+    setSliderValue(value)
+    if (props.min !== undefined && props.max !== undefined) {
+      if (props.min <= value && value <= props.max) {
+        setSliderValue(value);
+        handleSliderChange(props.id, value);
+      } else {
+        setSliderValue(props.defaultValue !== null ? props.defaultValue : "");
+      }
+    }
   }
 
   return (
     <div
-      className='flex glassCardLight dark:glassCardDark p-1 m-1 items-center'
-      onMouseLeave={handleIsEdit}
+      ref={node}
+      className='flex h-12 glassCardLight dark:glassCardDark p-1 m-1 items-center'
     >
       <p className='w-[600px] text-left'>
         {props.selectedLanguage}
@@ -45,10 +68,11 @@ const Slider = memo((props: Props) => {
 
       {isEdit &&
         <input
-          type="text"
+          type="number"
           value={sliderValue}
-          className='w-10 text-center mr-2'
-          onChange={(e) => setSliderValue(Number(e.target.value))}
+          className='w-10 text-center mr-2 glassCardDark text-white dark:text-black'
+          onChange={handleInputChange}
+          step={props.step}
         />
       }
 
