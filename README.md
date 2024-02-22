@@ -24,6 +24,16 @@
 
     2. sitemap.xml - 웹페이지 크롤링 및 색인
 
+2. meta태그 설정
+```js
+  <meta name="title" content="PalWorld Multi Server Setter" />
+  <meta name="description" content="You Can PalWorld Multi Server Setting This Website" />
+  <meta property="og:title" content="PalWorld Multi Server Setter">
+  <meta property="og:description" content="You Can PalWorld Multi Server Setting This Website">
+  <meta property="og:image" content="./images/background.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+```
 ## 4. Google AdSense
 1. 광고설정을 위해 index.html head태그에 코드 추가
    ```js 
