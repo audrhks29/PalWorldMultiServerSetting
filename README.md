@@ -44,4 +44,4 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4183167432172719"
     crossorigin="anonymous"></script>
    ```
-2. 자동 광고 설정 - 현재 승인 대기중...
+2. 자동 광고 설정 - 콘텐츠 부족으로 인해 광고 설정 불가
