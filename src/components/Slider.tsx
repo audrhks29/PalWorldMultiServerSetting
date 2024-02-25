@@ -72,7 +72,7 @@ const Slider = memo((props: Props) => {
             type="number"
             id={String(props.id) + "number"}
             value={sliderValue}
-            className='w-10 text-center mr-2 glassCardDark text-white dark:text-black'
+            className='w-10 text-center mr-2 glassCardDark text-white'
             onChange={handleInputChange}
             step={props.step}
           />
